@@ -21,10 +21,21 @@ def code(text: str):
                 else:
                     a.append(i)
 
-    file = open('output1.txt', 'w')
+    file = open('output_2.txt', 'w')
     for element in a:
         file.write(element)
     file.close()
+    
+    file = open('alfavit_2.txt', 'w')
+    file.write("Ключ: ")
+    for element in aaaaalfavit:
+        file.write(element)
+    file.write("\n")
+    file.write("      ")
+    for element in dec_alfavit:
+        file.write(element)
+    file.close()
+
 
     
 
