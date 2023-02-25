@@ -1,6 +1,6 @@
 def code(text: str):
-    alfavit = " ЕОИАСТНРВМЛДЯУПЗБЬК5ПrЛЙОХШ84У"
-    dec_alfavit = "ХЬБЧt1АЫ<Д ЩЪЯФИ>57К2ЕrЛЙОМШ84У"
+    aaaaalfavit = " ОИЕТНСАКЯРМЛПВДЬУЧЙЗЖЭЫГЦ,ФБЮХЩШ"
+    dec_alfavit = "cАХ8МrЛО2bКЕДБР74t<1ФУ5 >Ч?ИПaЙЬЫ"
     itog = {}
     a=[]
     with open(text, encoding="utf=8") as f:
@@ -17,7 +17,7 @@ def code(text: str):
             for i in j:
                 place = dec_alfavit.find(i)
                 if i in dec_alfavit:
-                    a.append(alfavit[place])
+                    a.append(aaaaalfavit[place])
                 else:
                     a.append(i)
 
@@ -29,4 +29,4 @@ def code(text: str):
     
 
 if __name__ == "__main__":
-    code("test_2.txt")
+    code("t.txt")
