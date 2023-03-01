@@ -1,31 +1,33 @@
 
-def code(text: str):
+def code(file: str) -> None:
     alfavit = "АБВГДЕЖЗИЙКЛМОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
     dec_alfavit = "ГДЕЖЗИЙКЛМОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВ"
-    itog = []
+    text = []
 
-    with open(text, encoding="utf=8") as f:
+    with open(file, encoding="utf=8") as f:
         for j in f:
             for i in j:
                 i = i.upper()
                 place = alfavit.find(i)
                 if i in alfavit:
-                    itog.append(dec_alfavit[place])
+                    text.append(dec_alfavit[place])
                 else:
-                    itog.append(i)
+                    text.append(i)
 
-    file = open('output.txt', 'w')
-    for element in itog:
-        file.write(element)
-    file.close()
+    new_file = open('output.txt', 'w')
+    for element in text:
+        new_file.write(element)
+    new_file.close()
 
-    file = open('alfavit.txt', 'w')
-    for element in alfavit:
-        file.write(element)
-    file.write("\n")
+    new_file = open('alfavit.txt', 'w')
+    new_file.write("Ключ: ")
     for element in dec_alfavit:
-        file.write(element)
-    file.close()
+        new_file.write(element)
+    new_file.write("\n")
+    new_file.write("      ")
+    for element in alfavit:
+        new_file.write(element)
+    new_file.close()
 
 
 if __name__ == "__main__":
